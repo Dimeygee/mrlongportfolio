@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Button } from "./button"
 import Image from 'next/image';

@@ -1,3 +1,5 @@
+'use client'
+
 import { Header } from "../components/header"
 import { Main } from "../components/main"
 import { Loader } from "../components/loader"

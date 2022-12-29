@@ -3,6 +3,7 @@
 import { Symblosvg } from "./icons/icons"
 import { useContext } from "react"
 import { MouseContext } from "./context/mousecontext"
+import { MenuContext } from "./menucontext"
 import Link from "next/link"
 import {motion} from "framer-motion"
 
@@ -10,8 +11,9 @@ import {motion} from "framer-motion"
 export const Logo = () => {
 
     const {  cursorChangeHandler  } = useContext(MouseContext)
+    const {  theme  } = useContext(MenuContext)
 
-    const isDark = localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    const isDark = theme === 'dark' ? true : false
 
     return(
         <Link href="/" className="flex items-center gap-[8px]"

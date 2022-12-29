@@ -1,12 +1,8 @@
-import mrlong from "../public/assets/mrlong.png"
-import Image from "next/image"
+
 
 export const AboutHeader = () => {
 
-    /*const style={
-        backgroundImage: `url(/assets/aboutbg.png)`,
-        backgroundSize: "cover",
-    }*/
+   
 
 
     return(

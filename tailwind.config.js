@@ -23,12 +23,12 @@ module.exports = {
       },
     },
     screens: {
-      'sm': '640px',
-      'md': '768px',
+      "xs":"280px",
+      'sm': '541px',
+      'md': '550px',
       'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
-    }
+      'xl': '1200px',
+    },
   },
   plugins: [],
 }

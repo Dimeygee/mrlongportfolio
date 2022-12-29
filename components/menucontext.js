@@ -10,9 +10,7 @@ export const MenuContextProvider = ({children}) => {
   
     const [open, setOpen] = useState(false)
     const [ theme, changeTheme ] = useState("")
-    
- 
-
+   
     useLayoutEffect(() => {
       if (localStorage.getItem("theme") === "dark"  ||
       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
