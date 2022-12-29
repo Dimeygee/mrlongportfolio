@@ -1,18 +1,140 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behaviour:smooth;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  
 }
+
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
+:root{
+  --mrlongblue: #2F80ED;
+}
+
+
 * {
   box-sizing: border-box;
+}
+
+.about_img{
+  background-image: url('https://res.cloudinary.com/dimejiscloud/image/upload/v1672127584/Image_2_wmouwx.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.mrlong{
+  background-image: url('https://res.cloudinary.com/dimejiscloud/image/upload/v1669638914/mrlongwiththepose_cufhyc.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+
+.navlink{
+  font-weight: 500;
+}
+
+.navlink.active,
+.footer li .navlink.active{
+  color:var(--mrlongblue);
+  position: relative;
+  font-weight: 700;
+}
+
+.navlink.active::before,
+.footer li .navlink.active::before{
+  content:"";
+  position: absolute;
+  background-color:var(--mrlongblue);
+  width:4px;
+  height: 4px;
+  border-radius: 100%;
+  left: -15px;
+  top:45%;
+}
+
+.navlink.dark_active,
+.footer li .navlink.dark_active{
+  color:white;
+  position: relative;
+  font-weight: 700;
+}
+
+.navlink.dark_active::before,
+.footer li .navlink.dark_active::before{
+  content:"";
+  position: absolute;
+  background-color:white;
+  width:4px;
+  height: 4px;
+  border-radius: 100%;
+  left: -15px;
+  top:45%;
+}
+
+.footer li .navlink{
+  color: #A0AEC0;
+}
+
+.work{
+  border:1px solid #2F80ED;
+  margin-bottom: 16px;
+}
+
+.name{
+  -webkit-text-stroke:2px black;
+  color:#0496FF;
+}
+
+.btn_container button{
+  outline:none;
+  border:none;
+  border-radius: 28px;
+  background-color: rgb(247, 250, 252, 0.1);
+}
+
+.btn_container button.light{
+  border:2px solid rgb(47, 128, 237, 0.1);
+  color:#2F80ED;
+}
+
+.name span{
+  color: black;
+}
+
+
+@media screen and (max-width:540px){
+
+  .navlink.active::before, .footer li .navlink.active::before{
+    display: none;
+  }
+
+  .navlink.dark_active::before, .footer li .navlink.dark_active::before{
+    display: none;
+  }
+
+  .mrlong{
+    background-position: center;
+  }
+
+  .about_img{
+    background-image: url('https://res.cloudinary.com/dimejiscloud/image/upload/v1672134238/Image_1_mugrcb.png');
+  }
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +143,11 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background:  #2D3748;
   }
+
 }
+
+
+
+
